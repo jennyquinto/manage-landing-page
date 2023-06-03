@@ -6,4 +6,4 @@ menuButtton.addEventListener('click', () => {
     ? menuList.setAttribute('aria-expanded', false)
     : menuList.setAttribute('aria-expanded', true)
     menuList.toggleAttribute('data-visible');
-})
+});
