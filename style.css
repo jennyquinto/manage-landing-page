@@ -308,16 +308,13 @@ body {
 }
 
 @media (max-width: 50em) {
+    body[data-overlay] {
+        overflow-y: hidden;
+    }
+
     main[data-overlay] {
         padding-top: 20rem;
         user-select: none;
-        /* min-height: 100vh; */
-        /* overflow-y: hidden !; */
-
-    }
-
-    body[data-overlay] {
-        overflow-y: hidden;
     }
 
     main[data-overlay]::before {
