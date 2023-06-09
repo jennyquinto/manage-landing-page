@@ -124,7 +124,6 @@ svg {
 }
 
 /* Utility classes */
-
 .visually-hidden {
     position: absolute;
     position: absolute !important;
@@ -225,6 +224,13 @@ svg {
 }
 
 
+/* General styling */
+body {
+    font-family: var(--ff-body);
+    font-size: var(--fs-body);
+    color: var(--clr-primary-400);
+}
+
 .container {
     --max-width: 1110px;
     --padding: 1rem;
@@ -246,19 +252,8 @@ svg {
     }
 }
 
-
-/* General styling */
-
-body {
-    font-family: var(--ff-body);
-    font-size: var(--fs-body);
-    color: var(--clr-primary-400);
-
-}
-
-
-
 .button {
+
     cursor: pointer;
     text-decoration: none;
     border: 0;
@@ -287,7 +282,6 @@ body {
 }
 
 /*  navigation  */
-
 .primary-header {
     margin-top: var(--size-700);
 }
@@ -303,8 +297,30 @@ body {
 }
 
 .nav-list {
+    display: flex;
     font-size: var(--fs-nav);
+    font-weight: var(--fw-semi-bold);
+    gap: clamp(var(--size-400), 5vw, var(--size-600));
+}
 
+.nav-list a {
+    text-decoration: none;
+    color: var(--clr-primary-400);
+}
+
+.nav-list a:where(:hover, :focus) {
+    color: var(--clr-accent-400);
+}
+
+/*  navigation button  */
+.btn-display-none {
+    display: none;
+}
+
+@media (min-width: 50em) {
+    .btn-display-ms {
+        display: inline-flex;
+    }
 }
 
 @media (max-width: 50em) {
@@ -331,6 +347,8 @@ body {
         position: absolute;
         padding: var(--size-700);
         inset: 7rem var(--size-400) auto;
+        max-width: 25em;
+        margin-inline: auto;
         background: var(--clr-neutral-100);
         border-radius: var(--size-100);
         box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);
@@ -341,7 +359,6 @@ body {
         position: fixed;
         inset: 0;
         z-index: -1;
-
     }
 
     .nav-list {
@@ -349,15 +366,6 @@ body {
         gap: var(--size-600);
         text-align: center;
         font-weight: var(--fw-bold);
-    }
-
-    .nav-list a {
-        text-decoration: none;
-        color: var(--clr-primary-400);
-    }
-
-    .nav-list a:where(:hover, :focus) {
-        color: var(--clr-accent-400);
     }
 
     .primary-navigation[data-visible] {
