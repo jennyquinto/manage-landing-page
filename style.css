@@ -235,8 +235,13 @@ body {
     color: var(--clr-primary-400);
 }
 
-p {
+p:not([class]) {
     color: var(--clr-secondary-400);
+    max-width: 32ch;
+}
+
+p[data-width="wide"] {
+    max-width: 42ch;
 }
 
 .container {
