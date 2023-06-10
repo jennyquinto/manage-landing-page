@@ -223,12 +223,20 @@ svg {
     padding-block: var(--size-700);
 }
 
+:where(.flow > * + *) {
+    margin-top: var(--flow-spacer, 3em);
+}
+
 
 /* General styling */
 body {
     font-family: var(--ff-body);
     font-size: var(--fs-body);
     color: var(--clr-primary-400);
+}
+
+p {
+    color: var(--clr-secondary-400);
 }
 
 .container {
