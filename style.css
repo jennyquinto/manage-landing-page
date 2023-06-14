@@ -226,7 +226,9 @@ svg {
 :where(.flow > * + *) {
     margin-top: var(--flow-spacer, 3em);
 }
-
+/* It could be written like this as well
+:where(.flow :not(:first-child))
+*/
 
 /* General styling */
 body {
@@ -234,6 +236,7 @@ body {
     font-size: var(--fs-body);
     color: var(--clr-primary-400);
 }
+
 
 p:not([class]) {
     color: var(--clr-secondary-400);
@@ -256,6 +259,10 @@ p[data-width="wide"] {
     display: grid;
     gap: 1rem;
 
+}
+
+.flow-order{
+    order: var(--order, 1);
 }
 
 @media (min-width: 50em) {
@@ -338,11 +345,11 @@ p[data-width="wide"] {
 
 @media (max-width: 50em) {
     body[data-overlay] {
-        overflow-y: hidden;
+        /* overflow-y: hidden; */
     }
 
     main[data-overlay] {
-        padding-top: 20rem;
+        /* padding-top: 20rem; */
         user-select: none;
     }
 
@@ -351,7 +358,7 @@ p[data-width="wide"] {
         position: fixed;
         inset: 0;
         z-index: -1;
-        background-image: linear-gradient(rgb(0 0 0 /0), rgb(0 0 0 /0.8));
+        background-image: linear-gradient(rgb(0 0 0 /0), rgb(0 0 1 /0.5));
     }
 
     .primary-navigation {
