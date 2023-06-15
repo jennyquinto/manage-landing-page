@@ -226,6 +226,7 @@ svg {
 :where(.flow > * + *) {
     margin-top: var(--flow-spacer, 3em);
 }
+
 /* It could be written like this as well
 :where(.flow :not(:first-child))
 */
@@ -261,7 +262,7 @@ p[data-width="wide"] {
 
 }
 
-.flow-order{
+.flow-order {
     order: var(--order, 1);
 }
 
@@ -272,8 +273,24 @@ p[data-width="wide"] {
     }
 }
 
-.button {
+.vertical-align-center {
+    align-items: center;
+}
 
+.justify-self-end-md {
+    justify-self: center;
+}
+
+@media(min-width: 50em) {
+    .justify-self-end-md {
+        justify-self: end;
+    }
+}
+
+
+
+.button {
+    display: flex;
     cursor: pointer;
     text-decoration: none;
     border: 0;
@@ -300,6 +317,35 @@ p[data-width="wide"] {
     color: var(--clr-accent-300);
     background-color: var(--clr-neutral-100);
 }
+
+/* cta */
+.cta {
+    position: relative;
+    isolation: isolate;
+    text-align: center;
+}
+
+@media (min-width: 50em) {
+    .cta {
+        text-align: left;
+    }
+}
+
+.cta::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-image: url('images/bg-tablet-pattern.svg'),
+        url('images/bg-tablet-pattern.svg');
+
+    background-position: -15rem -5rem, 80rem -42rem;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+
+}
+
+
 
 /*  navigation  */
 .primary-header {
@@ -344,15 +390,6 @@ p[data-width="wide"] {
 }
 
 @media (max-width: 50em) {
-    body[data-overlay] {
-        /* overflow-y: hidden; */
-    }
-
-    main[data-overlay] {
-        /* padding-top: 20rem; */
-        user-select: none;
-    }
-
     main[data-overlay]::before {
         content: '';
         position: fixed;
