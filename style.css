@@ -234,10 +234,16 @@ svg {
 .text-center {
     text-align: center;
 }
+.text-center p {
+    margin-inline: auto;
+}
 
 @media (max-width: 50em) {
     .text-center-sm-only {
         text-align: center;
+    }
+    .text-center-sm-only p{
+        margin-inline: auto;
     }
 }
 
