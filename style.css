@@ -223,6 +223,20 @@ svg {
     padding-block: var(--size-700);
 }
 
+.margin-bottom-700 {
+    margin-block-end: var(--size-700);
+}
+
+.display-sm-none {
+    display: none;
+}
+
+@media (min-width: 50em) {
+    .display-md-inline-flex {
+        display: inline-flex;
+    }
+}
+
 .vertical-align-center {
     align-items: center;
 }
@@ -234,6 +248,7 @@ svg {
 .text-center {
     text-align: center;
 }
+
 .text-center p {
     margin-inline: auto;
 }
@@ -242,18 +257,20 @@ svg {
     .text-center-sm-only {
         text-align: center;
     }
-    .text-center-sm-only p{
+
+    .text-center-sm-only p {
         margin-inline: auto;
     }
-}
-
-:where(.flow > * + *) {
-    margin-top: var(--flow-spacer, 3em);
 }
 
 /* It could be written like this as well
 :where(.flow :not(:first-child))
 */
+:where(.flow > * + *) {
+    margin-top: var(--flow-spacer, 3em);
+}
+
+
 
 /* General styling */
 body {
