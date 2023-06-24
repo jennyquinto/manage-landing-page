@@ -515,11 +515,22 @@ p[data-width="wide"] {
 /* Slider */
 .slider {
     display: flex;
+    list-style: none;
 }
 
 .slider > * {
     width: 100%;
     flex: 0 0 auto;
+    border-radius: var(--size-300);
+    background: var(--clr-neutral-100);
+}
+
+.slider img {
+    position: relative;
+    width: var(--size-800);
+    inset: 0;
+    margin-inline: auto;
+    top: -50%;
 }
 
 
