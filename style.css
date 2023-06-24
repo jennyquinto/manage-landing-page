@@ -513,7 +513,14 @@ p[data-width="wide"] {
 }
 
 /* Slider */
+.slider {
+    display: flex;
+}
 
+.slider > * {
+    width: 100%;
+    flex: 0 0 auto;
+}
 
 
 /* cta */
