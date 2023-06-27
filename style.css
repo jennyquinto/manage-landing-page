@@ -523,10 +523,11 @@ p[data-width="wide"] {
     flex: 0 0 auto;
     border-radius: var(--size-300);
     background: var(--clr-neutral-100);
+    position: relative;
 }
 
 .slider img {
-    position: relative;
+    position: absolute;
     width: var(--size-800);
     inset: 0;
     margin-inline: auto;
