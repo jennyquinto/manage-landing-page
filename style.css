@@ -517,6 +517,7 @@ p[data-width="wide"] {
 .slider {
     display: flex;
     list-style: none;
+    overflow-x: hidden;
 }
 
 .slider > * {
@@ -526,6 +527,7 @@ p[data-width="wide"] {
     border-radius: var(--size-300);
     background: var(--clr-neutral-100);
     width: 25%;
+    margin-inline-end: var(--size-400);
 }
 
 .slider img {
@@ -533,7 +535,7 @@ p[data-width="wide"] {
     position: absolute;
     inset: 0;
     margin-inline: auto;
-    top: -20%;
+    top: -10%;
 }
 
 
