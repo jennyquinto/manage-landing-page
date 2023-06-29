@@ -513,25 +513,27 @@ p[data-width="wide"] {
 }
 
 /* Slider */
+
 .slider {
     display: flex;
     list-style: none;
 }
 
 .slider > * {
-    width: 100%;
+    position: relative;
+    padding: var(--size-700) var(--size-600) var(--size-600);  
     flex: 0 0 auto;
     border-radius: var(--size-300);
     background: var(--clr-neutral-100);
-    position: relative;
+    width: 25%;
 }
 
 .slider img {
-    position: absolute;
     width: var(--size-800);
+    position: absolute;
     inset: 0;
     margin-inline: auto;
-    top: -50%;
+    top: -20%;
 }
 
 
