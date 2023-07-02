@@ -523,10 +523,9 @@ p[data-width="wide"] {
 
 .slider > * {
     position: relative;
-    padding: var(--size-800) var(--size-600) var(--size-600);  
+     
     flex: 0 0 auto;
-    border-radius: var(--size-300);
-    background: var(--clr-neutral-100);
+   
     width: 25%;
     margin-inline-end: var(--size-400);
 }
@@ -539,6 +538,11 @@ p[data-width="wide"] {
     top: -12%;
 }
 
+.slider-content {
+    padding: var(--size-800) var(--size-600) var(--size-600); 
+    border-radius: var(--size-100);
+    background: var(--clr-neutral-100);
+}
 
 /* cta */
 .cta {
