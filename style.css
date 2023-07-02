@@ -524,10 +524,8 @@ p[data-width="wide"] {
 
 .slider > * {
     position: relative;
-     
     flex: 0 0 auto;
-   
-    width: 25%;
+    /* width: 10%; */
     margin-inline-end: var(--size-400);
 }
 
