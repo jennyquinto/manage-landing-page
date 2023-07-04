@@ -4,12 +4,12 @@ const menuButtton = document.querySelector('.mobile-nav-toggle');
 const menuList = document.querySelector('.primary-navigation');
 
 menuButtton.addEventListener('click', () => {
-    menuList.hasAttribute('data-visible')
+  menuList.hasAttribute('data-visible')
     ? menuList.setAttribute('aria-expanded', false)
     : menuList.setAttribute('aria-expanded', true)
-    menuList.toggleAttribute('data-visible')
-    mainContent.toggleAttribute('data-overlay')
-    bodyContent.toggleAttribute('data-overlay');
+  menuList.toggleAttribute('data-visible')
+  mainContent.toggleAttribute('data-overlay')
+  bodyContent.toggleAttribute('data-overlay');
 });
 
 const slider = new A11YSlider(document.querySelector(".slider"), {
@@ -21,11 +21,13 @@ const slider = new A11YSlider(document.querySelector(".slider"), {
       // disable: false,
       slidesToShow: 1,
       // arrows: true,
-      dots: false
+      // dots: false
     },
     600: {
       slidesToShow: 2,
-    },    
+      dots: false
+
+    },
     900: {
       slidesToShow: 3,
     }
