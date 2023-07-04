@@ -20,19 +20,14 @@ const slider = new A11YSlider(document.querySelector(".slider"), {
     480: {
       // disable: false,
       slidesToShow: 1,
-      arrows: true,
+      // arrows: true,
       dots: false
     },
     600: {
-      // disable: false,
       slidesToShow: 2,
-      // arrows: true,
-    },
-    
+    },    
     900: {
-      // disable: false,
       slidesToShow: 3,
-      // arrows: true,
     }
   }
 });
