@@ -14,19 +14,26 @@ menuButtton.addEventListener('click', () => {
 
 const slider = new A11YSlider(document.querySelector(".slider"), {
   slidesToShow: 1,
-  arrows: true, // arrows enabled 767px and down
+  arrows: false, // arrows enabled 767px and down
   dots: true,
   responsive: {
-    580: {
-      disable: false,
+    480: {
+      // disable: false,
+      slidesToShow: 1,
+      arrows: false,
+      dots: true
+    },
+    600: {
+      // disable: false,
       slidesToShow: 2,
-      // arrows: true
+      arrows: true,
+      dots: false
     },
     
     900: {
-      disable: false,
+      // disable: false,
       slidesToShow: 3,
-      arrows: false,
+      arrows: true,
       dots: false // dots enabled 1280px and up
     }
   }
